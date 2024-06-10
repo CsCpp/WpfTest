@@ -5,9 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfTest"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="620">
     <Grid>
-        <Button Content="КНОПКА" Margin="50" Click="Button_Click"/>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="400*"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Button Content="КНОПКА" Margin="5" Click="Button_Click"/>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="130*"/>
+                <RowDefinition Height="180*"/>
+                <RowDefinition Height="20*"/>
+            </Grid.RowDefinitions>
+            <Button Content="Привет" Margin="3" Grid.Row="2"/>
+        </Grid>
     </Grid>
 </Window>
