@@ -7,31 +7,23 @@
         mc:Ignorable="d"
         Title="WPF test" Height="450" Width="620">
     <Grid>
-        <UniformGrid Columns="4">
-            <StackPanel Orientation="Horizontal">
-                <Button Content="КНОПКА" Margin="5" Click="Button_Click"/>
-                <Button Content="КНОПКА" Margin="5" Click="Button_Click"/>
-                <Button Content="КНОПКА" Margin="5" Click="Button_Click"/>
-                <Button Content="КНОПКА" Margin="5" Click="Button_Click"/>
-            </StackPanel>
-            <StackPanel Orientation="Vertical">
-                <Button Content="КНОПКА" Margin="5" Click="Button_Click"/>
-                <Button Content="КНОПКА" Margin="5" Click="Button_Click"/>
-                <Button Content="КНОПКА" Margin="5" Click="Button_Click"/>
-                <Button Content="КНОПКА" Margin="5" Click="Button_Click"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Button Content="КНОПКА" Margin="5" Click="Button_Click"/>
-                <Button Content="КНОПКА" Margin="5" Click="Button_Click"/>
-                <Button Content="КНОПКА" Margin="5" Click="Button_Click"/>
-                <Button Content="КНОПКА" Margin="5" Click="Button_Click"/>
-            </StackPanel>
-            <StackPanel Orientation="Vertical">
-                <Button Content="КНОПКА" Margin="5" Click="Button_Click"/>
-                <Button Content="КНОПКА" Margin="5" Click="Button_Click"/>
-                <Button Content="КНОПКА" Margin="5" Click="Button_Click"/>
-                <Button Content="КНОПКА" Margin="5" Click="Button_Click"/>
-            </StackPanel>
-        </UniformGrid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Background="Gray">
+            <TextBlock Text="Меню" TextAlignment="Center"/>
+            <Button Content="Вход" Margin="3" />
+            <Button Content="Авторизация" Margin="3" />
+            <Button Content="Выход" Margin="3" Click="Button_Click" />
+        </StackPanel>
+        <Grid Grid.Column="1">
+            <TextBlock Text=" КОНТЕНТ БУДЕТ ТУТ"
+                       
+                       FontSize="30"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       />
+        </Grid>
     </Grid>
 </Window>
