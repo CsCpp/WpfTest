@@ -6,24 +6,23 @@
         xmlns:local="clr-namespace:WpfTest"
         mc:Ignorable="d"
         Title="WPF test" Height="450" Width="620">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <StackPanel Background="Gray">
-            <TextBlock Text="Меню" TextAlignment="Center"/>
-            <Button Content="Вход" Margin="3" />
-            <Button Content="Авторизация" Margin="3" />
-            <Button Content="Выход" Margin="3" Click="Button_Click" />
-        </StackPanel>
-        <Grid Grid.Column="1">
-            <TextBlock Text=" КОНТЕНТ БУДЕТ ТУТ"
-                       
-                       FontSize="30"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
-                       />
-        </Grid>
-    </Grid>
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Red"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style TargetType="Button" x:Key="Default">
+            <Setter Property="Background" Value="IndianRed"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+
+    </Window.Resources>
+        <UniformGrid VerticalAlignment="Center" Columns="4">
+            <Button Content="Text" Margin="3"/>
+            <Button Content="Text" Margin="3" Style="{StaticResource Default}"/>
+            <Button Content="Text" Margin="3" Background="RoyalBlue" Foreground="White" BorderThickness="0"/>
+            <Button Content="Text" Margin="3" />
+        </UniformGrid>
+   
 </Window>
