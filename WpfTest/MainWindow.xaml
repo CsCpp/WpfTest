@@ -16,14 +16,14 @@
                     <ControlTemplate TargetType="Button">
                         <Grid>
                             <Border Background="{TemplateBinding Background}" CornerRadius="3" RenderTransformOrigin="0.5 0.5">
-                            <Border.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform/>
-                                    <SkewTransform AngleX="-20"/>
-                                    <RotateTransform/>
-                                    <TranslateTransform/>
-                                </TransformGroup>
-                            </Border.RenderTransform>
+                                <Border.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform AngleX="-20"/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Border.RenderTransform>
                             </Border>
                             <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
                         </Grid>
@@ -31,22 +31,22 @@
                 </Setter.Value>
             </Setter>
         </Style>
-       
-        
+
+
         <Style TargetType="Button" x:Key="DefaultBtn" BasedOn="{StaticResource BaseBtn}">
             <Setter Property="Background" Value="RoyalBlue"/>
-         </Style>
+        </Style>
 
         <Style TargetType="Button" x:Key="Error" BasedOn="{StaticResource BaseBtn}">
             <Setter Property="Background" Value="Red"/>
         </Style>
 
     </Window.Resources>
-        <UniformGrid VerticalAlignment="Center" Columns="4">
-         
-            <Button Content="Text" Margin="3" Style="{StaticResource DefaultBtn}"/>
-            <Button Content="Text" Margin="3"  Style="{StaticResource Error}"/>
-            <Button Content="Text" Margin="3" />
-        </UniformGrid>
-   
+    <UniformGrid VerticalAlignment="Center" Columns="4">
+
+        <Button Content="Text" Margin="3" Style="{StaticResource DefaultBtn}"/>
+        <Button Content="Text" Margin="3"  Style="{StaticResource Error}"/>
+        <Button Content="Text" Margin="3" />
+    </UniformGrid>
+
 </Window>
