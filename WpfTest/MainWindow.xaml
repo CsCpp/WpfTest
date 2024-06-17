@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="WPF test" Height="450" Width="620">
     <Window.Resources>
-        <Style TargetType="Button" x:Key="BaseBtn">
+        <Style TargetType="Button"  x:Key="BaseBtn">
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="FontSize" Value="15"/>
@@ -27,13 +27,27 @@
                             </Border>
                             <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
                         </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="True">
+                                <Setter Property="Background" Value="{StaticResource MediumBaseBrush}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="{StaticResource LightBaseBrush}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="{StaticResource UltraLightBaseBrush}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="True">
+                                <Setter Property="Background" Value="{StaticResource DarkBrush}"/>
+                            </Trigger>
+                            
+                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
 
-
-        <Style TargetType="Button" x:Key="DefaultBtn" BasedOn="{StaticResource BaseBtn}">
+             <Style TargetType="Button" x:Key="DefaultBtn" BasedOn="{StaticResource BaseBtn}">
             <Setter Property="Background" Value="RoyalBlue"/>
         </Style>
 
@@ -41,10 +55,23 @@
             <Setter Property="Background" Value="Red"/>
         </Style>
 
+        <SolidColorBrush x:Key="LightBaseBrush" Color="#FF2CB679"/>
+        <Color x:Key="LightBaseColor">#FF2CB679</Color>
+
+        <SolidColorBrush x:Key="UltraLightBaseBrush" Color="#FF3BC588"/>
+        <Color x:Key="UltraLightBaseBrush">#FF3BC588</Color>
+
+        <SolidColorBrush x:Key="DarkBrush" Color="#FFD6D6D6"/>
+        <Color x:Key="DarkBrush">#FFD6D6D6</Color>
+
+        <SolidColorBrush x:Key="MediumBaseBrush" Color="#FF2CB000"/>
+        <Color x:Key="MediumBaseBrush">#FF2CB000</Color>
+
+
     </Window.Resources>
     <UniformGrid VerticalAlignment="Center" Columns="4">
 
-        <Button Content="Text" Margin="3" Style="{StaticResource DefaultBtn}"/>
+        <Button Content="Text" Click="Button_Click"  Margin="3" Style="{StaticResource DefaultBtn}"/>
         <Button Content="Text" Margin="3"  Style="{StaticResource Error}"/>
         <Button Content="Text" Margin="3" />
     </UniformGrid>
