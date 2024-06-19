@@ -9,9 +9,11 @@
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
         AllowsTransparency="True">
     <Border Background="#272535"
-            CornerRadius="20">
+            CornerRadius="15">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
@@ -29,6 +31,29 @@
                        Foreground="White"
                        FontSize="22"
                        Margin="20,0,0,0"/>
+                    <StackPanel Grid.Row="1" >
+                        <RadioButton Content="Домой" 
+                                     Height="50"
+                                     Foreground="White"
+                                     FontSize="15"
+                                     Style="{StaticResource MenuButtonTheame}"/>
+             
+                        <RadioButton Content="Войти" 
+                     Height="50"
+                     Foreground="White"
+                     FontSize="15"
+                     Style="{StaticResource MenuButtonTheame}"/>
+                        <RadioButton Content="Регистрация" 
+                     Height="50"
+                     Foreground="White"
+                     FontSize="15"
+                     Style="{StaticResource MenuButtonTheame}"/>
+                        <RadioButton Content="Обратная связь" 
+        Height="50"
+        Foreground="White"
+        FontSize="15"
+        Style="{StaticResource MenuButtonTheame}"/>
+                    </StackPanel>
 
         </Grid>
         
