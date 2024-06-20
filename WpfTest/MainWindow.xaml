@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfTest"
         mc:Ignorable="d"
-        Title="WPF test" Height="600" Width="920"
+        Title="WPF test" Height="500" Width="820"
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent"
@@ -54,7 +54,15 @@
         FontSize="15"
         Style="{StaticResource MenuButtonTheame}"/>
                     </StackPanel>
-
+            <TextBox Width="200"
+                     Height="40"
+                     VerticalContentAlignment="Center"
+                     HorizontalAlignment="Left"
+                     Margin="5"
+                     Grid.Column="1"
+                     Style="{StaticResource MordernTextBox}">
+                
+            </TextBox>
         </Grid>
         
     </Border>
