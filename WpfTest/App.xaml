@@ -11,11 +11,15 @@
                 <ResourceDictionary Source="Theam/MenuButtonTheame.xaml"/>
                 <ResourceDictionary Source="Theam/TextBoxTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
                 <view:HomeView/>
-
-
             </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:DiscoveryViewModel}">
+                <view:DiscoveryView/>
+            </DataTemplate>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
