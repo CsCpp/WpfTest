@@ -70,6 +70,27 @@
                      Margin="5"
                      Grid.Column="1"
                      Style="{StaticResource MordernTextBox}"/>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="610"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <RadioButton 
+                    Grid.Column="1"
+                    Content="X" 
+                    Height="50"
+                    Background="#161430"
+                    Foreground="Gray"
+                    FontSize="15"
+                    Style="{StaticResource MenuButtonTheame}"
+                    Command="{Binding ExitApp}"/>  
+
+            </Grid>
 
             <ContentControl Grid.Row="1"
                             Grid.Column="1"
